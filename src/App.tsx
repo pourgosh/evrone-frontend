@@ -1,7 +1,11 @@
-import { ReactElement } from "react";
+import Router from "./Routes";
 
-function App(): ReactElement {
-  return <></>;
+function App() {
+  return (
+    <>
+      <Router />
+    </>
+  );
 }
 
 export default App;
