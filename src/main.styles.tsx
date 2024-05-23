@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
 html,
 body,
 div,
@@ -83,7 +86,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -122,3 +125,16 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@font-face {
+  font-family: Suisse Intl Regular;
+  src: url('/font/suisseintl-regular_0.otf') format('opentype');
+}
+html{
+    font-size:16px;
+    line-height:1.5 ;
+    }
+body{
+        background-color: #fff;
+        font-family:Suisse Intl Regular;
+    }
+`;
