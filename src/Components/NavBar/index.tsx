@@ -1,4 +1,4 @@
-import { Div, Nav } from "./index.styles";
+import { Div, Nav } from "./Navbar.styles";
 
 const NavBar = () => {
   return (
