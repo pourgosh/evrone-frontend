@@ -1,13 +1,15 @@
 import styled from "styled-components";
+import NavBar from ".";
 
-type DivProps = {
+type NavProps = {
   display?: string;
   justifyc?: string;
   btnbgc?: string;
   btnBorder?: string;
+  className?: string;
 };
 
-export const Nav = styled.nav`
+export const StyledNav = styled(NavBar)<NavProps>`
   display: flex;
   padding: 14px 20px;
   font-family: Suisse Intl Regular;
@@ -20,13 +22,13 @@ export const Nav = styled.nav`
   @media (min-width: 1260px) {
     padding: 18px 120px;
   }
-`;
 
-export const Div = styled.div<DivProps>`
-  flex: 1;
-  display: ${(props) => props.display || "block"};
-  justify-content: ${(props) => props.justifyc || "center"};
-  align-items: center;
+  div {
+    flex: 1;
+    display: ${(props) => props.display || "block"};
+    justify-content: ${(props) => props.justifyc || "center"};
+    align-items: center;
+  }
   p {
     font-size: 25px;
     font-weight: 900;

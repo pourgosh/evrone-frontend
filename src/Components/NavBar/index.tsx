@@ -1,15 +1,17 @@
-import { Div, Nav } from "./Navbar.styles";
+type NavBarProps = {
+  className: string;
+};
 
-const NavBar = () => {
+const NavBar = ({ className }: NavBarProps): JSX.Element => {
   return (
-    <Nav>
-      <Div display={"flex"} justifyc={"flex-start"}>
+    <nav className={className}>
+      <div>
         <p>evrone</p>
-      </Div>
-      <Div display={"flex"} justifyc={"flex-end"}>
+      </div>
+      <div>
         <button>Menu</button>
-      </Div>
-    </Nav>
+      </div>
+    </nav>
   );
 };
 
