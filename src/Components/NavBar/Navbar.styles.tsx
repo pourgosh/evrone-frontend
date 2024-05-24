@@ -76,7 +76,7 @@ export const StyledNav = styled(NavBar)<NavProps>`
     background-color: #f53;
     padding: 14px 20px;
     border-radius: 6px;
-    @media (max-width: 900px) {
+    @media (max-width: 985px) {
       display: none;
     }
   }

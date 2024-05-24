@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import HomePage from "../Views/HomePage";
+import { StyledHomePage } from "../Views/HomePage/HomePage.styles";
 
 const Router = () => {
   return (
     <>
       <Routes>
-        <Route path={"/"} element={<HomePage />} />
+        <Route path={"/"} element={<StyledHomePage />} />
       </Routes>
     </>
   );
