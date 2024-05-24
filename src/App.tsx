@@ -4,7 +4,6 @@ import Router from "./Routes";
 function App() {
   return (
     <>
-      {/* <NavBar /> */}
       <StyledNav display={"flex"} />
       <Router />
     </>
