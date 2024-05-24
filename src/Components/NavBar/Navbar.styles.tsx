@@ -4,8 +4,6 @@ import NavBar from ".";
 type NavProps = {
   display?: string;
   justifyc?: string;
-  btnbgc?: string;
-  btnBorder?: string;
   className?: string;
 };
 
@@ -22,21 +20,67 @@ export const StyledNav = styled(NavBar)<NavProps>`
   @media (min-width: 1260px) {
     padding: 18px 120px;
   }
-
-  div {
+  .menu p,
+  .letsTalk p,
+  .listContainer p {
+    font-size: 20px;
+    font-weight: 300;
+    white-space: nowrap;
+  }
+  .listContainer div svg {
+    font-size: 25px;
+    font-weight: 300;
+    white-space: nowrap;
+  }
+  .logoContainer {
     flex: 1;
-    display: ${(props) => props.display || "block"};
-    justify-content: ${(props) => props.justifyc || "center"};
+    @media (min-width: 900px) {
+      padding: 10px;
+    }
+  }
+  .logoContainer p {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .navItemsContainer {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
     align-items: center;
+    @media (min-width: 1260px) {
+      flex: 3;
+    }
   }
-  p {
-    font-size: 25px;
-    font-weight: 900;
+  .listContainer {
+    display: none;
+    gap: 20px;
+    padding-right: 15px;
+    @media (min-width: 1260px) {
+      display: flex;
+    }
   }
-  button {
-    background-color: ${(props) => props.btnbgc || "inherit"};
-    font-size: 25px;
-    border: ${(props) => props.btnBorder || "none"};
+  .navItem {
+    padding-top: 4px;
+  }
+  .menu {
+    @media (min-width: 900px) {
+      justify-content: flex-end;
+    }
+    @media (min-width: 1260px) {
+      display: none;
+    }
+  }
+
+  .letsTalk {
+    background-color: #f53;
+    padding: 10px;
     border-radius: 6px;
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+  .letsTalk p {
+    color: #f0f0f0;
   }
 `;
