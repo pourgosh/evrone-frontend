@@ -27,11 +27,6 @@ export const StyledNav = styled(NavBar)<NavProps>`
     font-weight: 300;
     white-space: nowrap;
   }
-  .listContainer div svg {
-    font-size: 25px;
-    font-weight: 300;
-    white-space: nowrap;
-  }
   .logoContainer {
     flex: 1;
     @media (min-width: 900px) {
@@ -60,6 +55,11 @@ export const StyledNav = styled(NavBar)<NavProps>`
       display: flex;
     }
   }
+  .listContainer div svg {
+    font-size: 25px;
+    font-weight: 300;
+    white-space: nowrap;
+  }
   .navItem {
     padding-top: 4px;
   }
@@ -74,7 +74,7 @@ export const StyledNav = styled(NavBar)<NavProps>`
 
   .letsTalk {
     background-color: #f53;
-    padding: 10px;
+    padding: 14px 20px;
     border-radius: 6px;
     @media (max-width: 900px) {
       display: none;
