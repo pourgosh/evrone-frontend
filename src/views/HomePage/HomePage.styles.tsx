@@ -3,6 +3,7 @@ import HomePage from ".";
 
 type HomeProps = {
   className?: string;
+  bgImage?: string;
 };
 
 export const StyledHomePage = styled(HomePage)<HomeProps>`
