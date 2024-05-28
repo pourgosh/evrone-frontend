@@ -6,16 +6,15 @@ type HomeProps = {
 };
 
 export const StyledHomePage = styled(HomePage)<HomeProps>`
-  display: flex;
   .titleWrapper {
     padding-left: 20px;
-    padding-top: 80px;
+    padding-top: 60px;
     @media (min-width: 900px) {
-      padding-top: 140px;
+      padding-top: 120px;
       padding-left: 42px;
     }
     @media (min-width: 1100px) {
-      padding-top: 200px;
+      padding-top: 180px;
       padding-left: 75px;
     }
     @media (min-width: 1260px) {
@@ -39,6 +38,91 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
     @media (min-width: 900px) {
       font-size: 60px;
       font-weight: normal;
+    }
+  }
+  .subHeaderContainer {
+    width: 66.6%;
+    margin-bottom: 15px;
+    padding-left: 25px;
+
+    @media (min-width: 900px) {
+      padding-left: 47px;
+      padding-top: 20px;
+    }
+    @media (min-width: 1100px) {
+      padding-left: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-left: 135px;
+    }
+  }
+  .subHeaderContainer p {
+    color: #999;
+    font-size: 16px;
+    @media (min-width: 900px) {
+      font-size: 20px;
+    }
+  }
+  form {
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+    @media (min-width: 780px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 8px;
+    }
+    @media (min-width: 900px) {
+      padding-left: 47px;
+    }
+    @media (min-width: 1100px) {
+      padding-left: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-left: 135px;
+    }
+  }
+  form section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    @media (min-width: 570px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 8px;
+      background-color: #fff;
+    }
+  }
+  form .textArea {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @media (min-width: 780px) {
+      padding-right: 20px;
+    }
+    @media (min-width: 960px) {
+      padding-right: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-right: 70px;
+    }
+    @media (min-width: 1260px) {
+      padding-right: 120px;
+    }
+  }
+  form input {
+    font-size: 16px;
+    color: #000;
+    border-radius: 6px;
+    color: #000;
+    border: 2px solid #f0f0f0;
+    background-color: #f0f0f0;
+    padding: 6px;
+    @media (min-width: 900px) {
+      font-size: 20px;
+      padding: 10px;
     }
   }
 `;

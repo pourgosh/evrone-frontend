@@ -43,6 +43,9 @@ export const StyledNav = styled(NavBar)<NavProps>`
     gap: 10px;
     justify-content: flex-end;
     align-items: center;
+    @media (min-width: 900px) {
+      padding-right: 20px;
+    }
     @media (min-width: 1260px) {
       flex: 3;
     }
