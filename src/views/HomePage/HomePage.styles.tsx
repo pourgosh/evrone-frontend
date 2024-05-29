@@ -69,7 +69,7 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 15px;
     @media (min-width: 780px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -88,7 +88,7 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
   form section {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
     @media (min-width: 570px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

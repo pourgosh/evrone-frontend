@@ -10,21 +10,41 @@ type HomeProps = {
 };
 const HomePage = ({ className }: HomeProps): JSX.Element => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [sliderImage, _] = useState([firstImage, scndImage, thirdImage]);
+  const [SliderItems, _] = useState([
+    {
+      title: "Gett",
+      describtion: `Legacy project support for an international taxi ordering service `,
+      date: "July 2022",
+      image: firstImage,
+    },
+    {
+      title: "Jiseki Health",
+      describtion: `Building a HIPAA-compliant rules engine for text-based service company`,
+      date: " November 2020",
+      image: scndImage,
+    },
+    {
+      title: "Elizaveta Porodina",
+      describtion: `Design and development of a minimalistic fashion photography website`,
+      date: " August 2020",
+      image: thirdImage,
+    },
+  ]);
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [imgIndex, setImgIndex] = useState(0);
+  const [sliderIndex, setSliderIndex] = useState(0);
 
   const prevImg = () => {
-    setImgIndex(imgIndex - 1);
-    if (imgIndex === 0) {
-      setImgIndex(0);
+    setSliderIndex(sliderIndex - 1);
+    if (sliderIndex === 0) {
+      setSliderIndex(0);
     }
   };
 
   const nextImg = () => {
-    setImgIndex(imgIndex + 1);
-    if (imgIndex === sliderImage.length - 1) {
-      setImgIndex(0);
+    setSliderIndex(sliderIndex + 1);
+    if (sliderIndex === SliderItems.length - 1) {
+      setSliderIndex(0);
     }
   };
 
@@ -49,7 +69,8 @@ const HomePage = ({ className }: HomeProps): JSX.Element => {
       </form>
       <div className="sliderWrapper">
         <StyledSliderContainer
-          bgImage={sliderImage[imgIndex]}
+          items={SliderItems[sliderIndex]}
+          bgImage={SliderItems[sliderIndex].image}
           prevFunc={prevImg}
           nextFunc={nextImg}
         />
