@@ -75,6 +75,12 @@ const HomePage = ({ className }: HomeProps): JSX.Element => {
           nextFunc={nextImg}
         />
       </div>
+      <div className="offersContainer">
+        <p>
+          We offer a complete range of bespoke design and development services
+          to help you turn your ideas into digital masterpieces.
+        </p>
+      </div>
     </main>
   );
 };

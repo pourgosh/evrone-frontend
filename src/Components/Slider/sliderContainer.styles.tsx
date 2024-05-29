@@ -9,7 +9,6 @@ type SliderImageProps = {
 export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
   padding-top: 50px;
   width: 100%;
-  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,7 +68,7 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
       max-height: 900px;
     }
   }
-  .btnContainer {
+  .imgContainer .btnContainer {
     flex: 1;
     height: fit-content;
     display: flex;
@@ -81,6 +80,7 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
   }
   .itemInfoContainer {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     @media (min-width: 720px) {

@@ -126,4 +126,35 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
       padding: 10px;
     }
   }
+  .offersContainer {
+    padding-top: 30px;
+    padding-left: 25px;
+    @media (min-width: 420px) {
+      padding-top: 35px;
+      padding-left: 35px;
+    }
+    @media (min-width: 900px) {
+      padding-top: 80px;
+      padding-left: 43px;
+    }
+    @media (min-width: 1000px) {
+      padding-left: 48px;
+    }
+    @media (min-width: 1100px) {
+      padding-left: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-top: 50px;
+      padding-left: 135px;
+    }
+    @media (min-width: 1900px) {
+      padding-left: 160px;
+    }
+  }
+  .offersContainer p {
+    font-size: 20px;
+    @media (min-width: 900px) {
+      font-size: 30px;
+    }
+  }
 `;
