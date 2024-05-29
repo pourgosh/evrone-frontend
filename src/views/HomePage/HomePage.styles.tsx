@@ -127,14 +127,14 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
     }
   }
   .offersContainer {
-    padding-top: 30px;
+    padding-top: 120px;
     padding-left: 25px;
     @media (min-width: 420px) {
-      padding-top: 35px;
+      padding-top: 150px;
       padding-left: 35px;
     }
     @media (min-width: 900px) {
-      padding-top: 80px;
+      padding-top: 170px;
       padding-left: 43px;
     }
     @media (min-width: 1000px) {
@@ -144,10 +144,11 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
       padding-left: 80px;
     }
     @media (min-width: 1260px) {
-      padding-top: 50px;
+      padding-top: 200px;
       padding-left: 135px;
     }
     @media (min-width: 1900px) {
+      padding-top: 250px;
       padding-left: 160px;
     }
   }
@@ -155,6 +156,22 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
     font-size: 20px;
     @media (min-width: 900px) {
       font-size: 30px;
+    }
+  }
+  .scrollerWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-top: 30px;
+    @media (min-width: 420px) {
+      padding-top: 35px;
+    }
+    @media (min-width: 900px) {
+      padding-top: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-top: 50px;
     }
   }
 `;

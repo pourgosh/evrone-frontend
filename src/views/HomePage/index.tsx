@@ -10,6 +10,7 @@ import loreal from "/scrollers/loreal.svg";
 import medcor from "/scrollers/medcorder.svg";
 import pirelli from "/scrollers/pirelli.svg";
 import quiv from "/scrollers/quiv.svg";
+import { StyledPartners } from "../../Components/Partners/partners.style";
 
 type HomeProps = {
   className: string;
@@ -95,6 +96,9 @@ const HomePage = ({ className }: HomeProps): JSX.Element => {
           We offer a complete range of bespoke design and development services
           to help you turn your ideas into digital masterpieces.
         </p>
+      </div>
+      <div className="scrollerWrapper">
+        <StyledPartners scrollItems={scrollerItems} />
       </div>
     </main>
   );
