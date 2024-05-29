@@ -13,6 +13,8 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh"],
   rules: {
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
