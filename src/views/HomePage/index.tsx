@@ -4,6 +4,12 @@ import { StyledSliderContainer } from "../../Components/Slider/sliderContainer.s
 import firstImage from "/hero/gett.png";
 import scndImage from "/hero/jiseki_.png";
 import thirdImage from "/hero/porodina_cover.jpg";
+import crypto from "/scrollers/cryptopay.svg";
+import jiseki from "/scrollers/jiseki.svg";
+import loreal from "/scrollers/loreal.svg";
+import medcor from "/scrollers/medcorder.svg";
+import pirelli from "/scrollers/pirelli.svg";
+import quiv from "/scrollers/quiv.svg";
 
 type HomeProps = {
   className: string;
@@ -30,9 +36,18 @@ const HomePage = ({ className }: HomeProps): JSX.Element => {
       image: thirdImage,
     },
   ]);
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [sliderIndex, setSliderIndex] = useState(0);
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [scrollerItems, setScrollerItems] = useState([
+    crypto,
+    jiseki,
+    loreal,
+    medcor,
+    pirelli,
+    quiv,
+  ]);
 
   const prevImg = () => {
     setSliderIndex(sliderIndex - 1);
