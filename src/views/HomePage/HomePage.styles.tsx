@@ -344,23 +344,21 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
   }
 
   .employeeWrapper .employeeContent {
-    padding-top: 40px;
+    padding-top: 30px;
     display: flex;
     gap: 20px;
     overflow: hidden;
 
     @media (min-width: 1100px) {
-      padding-top: 60px;
+      padding-top: 50px;
     }
     @media (min-width: 1500px) {
-      padding-top: 70px;
+      padding-top: 60px;
     }
     overflow-x: scroll;
   }
   .solutionsWrapper {
-    padding-top: 120px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 120px 25px 0 25px;
     @media (min-width: 420px) {
       padding: 150px 35px 0 35px;
     }
@@ -380,6 +378,23 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
     white-space: nowrap;
     @media (min-width: 900px) {
       font-size: 40px;
+    }
+  }
+  .solutionsWrapper .solutionsContent {
+    padding-top: 30px;
+    @media (min-width: 470px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 720px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1100px) {
+      padding-top: 50px;
+    }
+    @media (min-width: 1500px) {
+      padding-top: 60px;
     }
   }
 `;

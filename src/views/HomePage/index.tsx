@@ -22,6 +22,7 @@ import kinderlime from "/cases/kinderlime.png";
 import pirelliCover from "/cases/pirelli_cover.png";
 import Employees from "../../Components/Employees";
 import ArrowBtns from "../../Components/ArrowBtns";
+import { StyledSolution } from "../../Components/Solutions/Solutions.styles";
 
 type HomeProps = {
   className: string;
@@ -218,7 +219,15 @@ const HomePage = ({ className }: HomeProps): JSX.Element => {
         <div className="solutionsTitle">
           <p>Ready-made solutions</p>
         </div>
-        <div className="solutionsContent"></div>
+        <div className="solutionsContent">
+          <StyledSolution label={"CRM"} />
+          <StyledSolution label={"ERP"} />
+          <StyledSolution label={"Media"} />
+          <StyledSolution label={"Marketplace"} />
+          <StyledSolution label={"Blockchain"} />
+          <StyledSolution label={"Machine Learning"} />
+          <StyledSolution label={"Artificial Intelligence"} />
+        </div>
       </div>
     </main>
   );
