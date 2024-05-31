@@ -64,8 +64,12 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
       min-height: 800px;
     }
     @media (min-width: 1800px) {
-      width: 85%;
-      max-height: 900px;
+      width: 87%;
+      min-height: 900px;
+    }
+    @media (min-width: 2000px) {
+      width: 89%;
+      min-height: 1100px;
     }
   }
   .imgContainer .btnContainer {
@@ -118,8 +122,11 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
     font-size: 20px;
     white-space: nowrap;
     width: max-content;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #000;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #999;
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
     @media (min-width: 900px) {
       font-size: 24px;
     }

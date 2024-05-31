@@ -17,7 +17,6 @@ const SliderContainer = ({
   nextFunc,
   items,
 }: Props): JSX.Element => {
-  console.log(items);
   return (
     <div className={className}>
       <section className="imgContainer">
