@@ -272,9 +272,10 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
   }
   .whyUsWrapper .specializesText {
     padding: 30px 0 0 5px;
-    width: 66.6%;
+    width: 90%;
     @media (min-width: 1100px) {
       padding: 60px 0 0 5px;
+      width: 66.6%;
     }
   }
   .whyUsWrapper .specializesText p {
@@ -294,6 +295,91 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
     }
     @media (min-width: 1100px) {
       padding-top: 50px;
+    }
+  }
+  .employeeWrapper {
+    padding-top: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
+    @media (min-width: 420px) {
+      padding: 150px 35px 0 35px;
+    }
+    @media (min-width: 900px) {
+      padding-inline: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 175px;
+      padding-inline: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-inline: 155px;
+    }
+  }
+
+  .employeeWrapper .infoContainer {
+    display: flex;
+  }
+  .employeeWrapper .infoContainer .employeeTitle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .employeeWrapper .infoContainer .employeeTitle p {
+    font-size: 24px;
+    white-space: nowrap;
+    @media (min-width: 900px) {
+      font-size: 40px;
+    }
+  }
+
+  .employeeWrapper .infoContainer .employeeBtns {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    @media (min-width: 1100px) {
+      gap: 30px;
+    }
+  }
+
+  .employeeWrapper .employeeContent {
+    padding-top: 40px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+
+    @media (min-width: 1100px) {
+      padding-top: 60px;
+    }
+    @media (min-width: 1500px) {
+      padding-top: 70px;
+    }
+    overflow-x: scroll;
+  }
+  .solutionsWrapper {
+    padding-top: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
+    @media (min-width: 420px) {
+      padding: 150px 35px 0 35px;
+    }
+    @media (min-width: 900px) {
+      padding-inline: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 175px;
+      padding-inline: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-inline: 155px;
+    }
+  }
+  .solutionsWrapper .solutionsTitle p {
+    font-size: 24px;
+    white-space: nowrap;
+    @media (min-width: 900px) {
+      font-size: 40px;
     }
   }
 `;

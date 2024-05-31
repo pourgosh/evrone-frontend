@@ -20,6 +20,8 @@ import crmLogo from "/cases/crm_logo_00000-min.png";
 import emco from "/cases/emco.jpg";
 import kinderlime from "/cases/kinderlime.png";
 import pirelliCover from "/cases/pirelli_cover.png";
+import Employees from "../../Components/Employees";
+import ArrowBtns from "../../Components/ArrowBtns";
 
 type HomeProps = {
   className: string;
@@ -192,6 +194,31 @@ const HomePage = ({ className }: HomeProps): JSX.Element => {
           <StyledWhyUs numb={100} text={"Clients worldwide"} />
           <StyledWhyUs numb={15} text={"Years of expirience"} />
         </div>
+      </div>
+      <div className="employeeWrapper">
+        <div className="infoContainer">
+          <div className="employeeTitle">
+            <p>Nice to Meet you!</p>
+          </div>
+          <div className="employeeBtns">
+            <ArrowBtns direction="left" />
+            <ArrowBtns direction="right" />
+          </div>
+        </div>
+        <div className="employeeContent">
+          <Employees />
+          <Employees />
+          <Employees />
+          <Employees />
+          <Employees />
+          <Employees />
+        </div>
+      </div>
+      <div className="solutionsWrapper">
+        <div className="solutionsTitle">
+          <p>Ready-made solutions</p>
+        </div>
+        <div className="solutionsContent"></div>
       </div>
     </main>
   );

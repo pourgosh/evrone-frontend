@@ -64,8 +64,12 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
       min-height: 800px;
     }
     @media (min-width: 1800px) {
-      width: 85%;
-      max-height: 900px;
+      width: 87%;
+      min-height: 900px;
+    }
+    @media (min-width: 2000px) {
+      width: 89%;
+      min-height: 1100px;
     }
   }
   .imgContainer .btnContainer {
