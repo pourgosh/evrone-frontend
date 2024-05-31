@@ -118,8 +118,11 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
     font-size: 20px;
     white-space: nowrap;
     width: max-content;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #000;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #999;
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
     @media (min-width: 900px) {
       font-size: 24px;
     }

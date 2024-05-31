@@ -16,7 +16,7 @@ const scroller = keyframes`
 
 export const StyledPartners = styled(Partners)<partnersType>`
   display: flex;
-  animation: ${scroller} 45s linear infinite;
+  animation: ${scroller} 105s linear infinite;
 
   img {
     width: 500px;

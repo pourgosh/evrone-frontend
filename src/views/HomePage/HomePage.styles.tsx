@@ -128,28 +128,28 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
   }
   .offersContainer {
     padding-top: 120px;
-    padding-left: 25px;
+    padding-inline: 25px;
     @media (min-width: 420px) {
       padding-top: 150px;
-      padding-left: 35px;
+      padding-inline: 35px;
     }
     @media (min-width: 900px) {
       padding-top: 170px;
-      padding-left: 43px;
+      padding-inline: 43px;
     }
     @media (min-width: 1000px) {
-      padding-left: 48px;
+      padding-inline: 48px;
     }
     @media (min-width: 1100px) {
-      padding-left: 80px;
+      padding-inline: 80px;
     }
     @media (min-width: 1260px) {
       padding-top: 200px;
-      padding-left: 135px;
+      padding-inline: 135px;
     }
     @media (min-width: 1900px) {
       padding-top: 250px;
-      padding-left: 160px;
+      padding-inline: 160px;
     }
   }
   .offersContainer p {
@@ -171,6 +171,128 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
       padding-top: 80px;
     }
     @media (min-width: 1260px) {
+      padding-top: 50px;
+    }
+  }
+  .casesMainTitle {
+    padding-top: 120px;
+    padding-left: 25px;
+    @media (min-width: 420px) {
+      padding: 150px 0 0 35px;
+    }
+    @media (min-width: 900px) {
+      padding-left: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 175px;
+      padding-left: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-left: 155px;
+    }
+  }
+  .casesMainTitle p {
+    font-size: 24px;
+    @media (min-width: 900px) {
+      font-size: 40px;
+    }
+  }
+  .CasesWrapper {
+    @media (min-width: 420px) {
+      padding-inline: 15px;
+    }
+    @media (min-width: 450px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 730px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 900px) {
+      padding-inline: 25px;
+    }
+
+    @media (min-width: 1100px) {
+      padding-inline: 60px;
+    }
+    @media (min-width: 1260px) {
+      padding-inline: 130px;
+    }
+  }
+  .allStudiesBtn {
+    padding-top: 35px;
+    padding-left: 30px;
+    @media (min-width: 800px) {
+      padding-top: 45px;
+    }
+    @media (min-width: 1800px) {
+      padding-top: 55px;
+    }
+  }
+  .allStudiesBtn button {
+    color: #000;
+    background-color: #f0f0f0;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #f0f0f0;
+    line-height: 2;
+    @media (min-width: 1100px) {
+      padding: 10px 20px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  }
+
+  .whyUsWrapper {
+    padding-top: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
+    @media (min-width: 420px) {
+      padding: 150px 35px 0 35px;
+    }
+    @media (min-width: 900px) {
+      padding-inline: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 175px;
+      padding-inline: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-inline: 155px;
+    }
+  }
+  .whyUsWrapper .whyUsHeader p {
+    font-size: 24px;
+    @media (min-width: 900px) {
+      font-size: 40px;
+    }
+  }
+  .whyUsWrapper .specializesText {
+    padding: 30px 0 0 5px;
+    width: 66.6%;
+    @media (min-width: 1100px) {
+      padding: 60px 0 0 5px;
+    }
+  }
+  .whyUsWrapper .specializesText p {
+    font-size: 16px;
+    line-height: 1.5;
+    @media (min-width: 1100px) {
+      font-size: 20px;
+    }
+  }
+  .whyUsWrapper .whyUsContent {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @media (min-width: 750px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1100px) {
       padding-top: 50px;
     }
   }
