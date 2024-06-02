@@ -348,14 +348,18 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
     display: flex;
     gap: 20px;
     overflow: hidden;
-
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     @media (min-width: 1100px) {
       padding-top: 50px;
     }
     @media (min-width: 1500px) {
       padding-top: 60px;
     }
-    overflow-x: scroll;
   }
   .solutionsWrapper {
     padding: 120px 25px 0 25px;
