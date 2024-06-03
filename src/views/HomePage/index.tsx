@@ -4,6 +4,8 @@ import { StyledPartners } from "../../Components/Partners/partners.style";
 import { StyledServices } from "../../Components/OurServices/ourServices.styles";
 import { StyledCaseStudies } from "../../Components/Cases/CaseStudies.styles";
 import { StyledWhyUs } from "../../Components/WhyUs/WhyUs.styles";
+import { StyledSolution } from "../../Components/Solutions/Solutions.styles";
+import { StyledIndustries } from "../../Components/Industries/Industries.styles";
 import Input from "../../Components/Input";
 import firstImage from "/hero/gett.png";
 import scndImage from "/hero/jiseki_.png";
@@ -22,7 +24,29 @@ import kinderlime from "/cases/kinderlime.png";
 import pirelliCover from "/cases/pirelli_cover.png";
 import Employees from "../../Components/Employees";
 import ArrowBtns from "../../Components/ArrowBtns";
-import { StyledSolution } from "../../Components/Solutions/Solutions.styles";
+import ecommerce from "/industries/ecommerce.jpg";
+import edtech from "/industries/edtech.jpg";
+import ehealth from "/industries/ehealth.jpg";
+import fintech from "/industries/fintech.jpg";
+import foodtech from "/industries/foodtech.jpg";
+import hrtech from "/industries/hrtech.jpg";
+import retail from "/industries/retail.jpg";
+import startup from "/industries/startup.jpg";
+import videostreaming from "/industries/videostreaming.jpg";
+import djangoImg from "/bottomlogos/tech-django.png";
+import dotNetImg from "/bottomlogos/tech-dot-net.png";
+import elixirImg from "/bottomlogos/tech-elixir.png";
+import flutterImg from "/bottomlogos/tech-flutter.png";
+import goImg from "/bottomlogos/tech-go.png";
+import kubernetisImg from "/bottomlogos/tech-kubernetis.png";
+import nodeImg from "/bottomlogos/tech-node.png";
+import pythonImg from "/bottomlogos/tech-python.png";
+import reactImg from "/bottomlogos/tech-react.png";
+import railsImg from "/bottomlogos/tech-rails.png";
+import rubyImg from "/bottomlogos/tech-ruby.png";
+import tsImg from "/bottomlogos/tech-typescript.png";
+import vueImg from "/bottomlogos/tech-vue.png";
+import TechPlatform from "../../Components/TechPlatform";
 
 type HomeProps = {
   className: string;
@@ -103,6 +127,76 @@ const HomePage = ({ className }: HomeProps) => {
     },
   ]);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [industries, setIndustries] = useState([
+    {
+      img: ecommerce,
+      label: "eCommerce",
+      text: "Our B2C and B2B eCommerce consulting & development services are aimed at scaling your business experience.",
+    },
+    {
+      img: fintech,
+      label: "Fintech",
+      text: "Evrones team of experts provides web development services to global financial services players.",
+    },
+    {
+      img: ehealth,
+      label: "eHealth",
+      text: "We can help you create custom eHealth solutions to transform the digital medicine industry.",
+    },
+    {
+      img: edtech,
+      label: "Edtech",
+      text: "We apply best EdTech practices to provide your project with top-notch Elearning software tailored to your business",
+    },
+    {
+      img: startup,
+      label: "Startup",
+      text: `Evrones software development services for startups are designed to transform your ideas into successful market-ready solutions`,
+    },
+    {
+      img: foodtech,
+      label: "Foodtech",
+      text: "We provide foodtech software development services &amp; solutions to automate all the processes for startups and enterprises.",
+    },
+    {
+      img: retail,
+      label: "Retail",
+      text: "We help automate business solutions for retailers while you set new goals",
+    },
+    {
+      img: videostreaming,
+      label: "Video streaming",
+      text: "Reach out to us if you need to develop a live streaming website or online video platform",
+    },
+    {
+      img: hrtech,
+      label: "HR-tech",
+      text: "Automating HR processes, developing HCM solutions for workforce planning &amp; management",
+    },
+    {
+      img: null,
+      label: "Real Estate",
+      text: null,
+    },
+  ]);
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [techLogos, setTechLogos] = useState([
+    railsImg,
+    pythonImg,
+    djangoImg,
+    rubyImg,
+    goImg,
+    dotNetImg,
+    elixirImg,
+    nodeImg,
+    tsImg,
+    reactImg,
+    vueImg,
+    flutterImg,
+    kubernetisImg,
+  ]);
   // const itemsRef = useRef<HTMLDivElement | null>(null);
   // const [isMouseDown, setIsMouseDown] = useState(false);
   // const [startX, setStartX] = useState(0);
@@ -285,11 +379,11 @@ const HomePage = ({ className }: HomeProps) => {
         </div>
         <div
           className="employeeContent"
-          ref={itemsRef}
           // onMouseDown={handleMouseDown}
           // onMouseLeave={handleMouseLeave}
           // onMouseUp={handleMouseUp}
           // onMouseMove={handleMouseMove}
+          ref={itemsRef}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
         >
@@ -314,6 +408,63 @@ const HomePage = ({ className }: HomeProps) => {
           <StyledSolution label={"Machine Learning"} />
           <StyledSolution label={"Artificial Intelligence"} />
         </div>
+      </div>
+      <div className="industriesWrapper">
+        <div className="industriesTop">
+          <div className="industriesTitle">
+            <p>Industries we serve</p>
+          </div>
+          <div className="arrowBtnsBox">
+            <ArrowBtns direction="left" />
+            <ArrowBtns direction="right" />
+          </div>
+        </div>
+        <div
+          className="industriesContent"
+          ref={itemsRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+        >
+          {industries.map((elem, i) => {
+            return (
+              <Fragment key={i}>
+                <StyledIndustries
+                  text={elem.text}
+                  img={elem.img}
+                  label={elem.label}
+                />
+              </Fragment>
+            );
+          })}
+        </div>
+      </div>
+      <div className="techPlatformsWrapper">
+        <div className="techPlaformTitle">
+          <p>Technology Platforms We Use</p>
+        </div>
+        <div className="techPlatformsTxt">
+          <p>
+            We stay on top of the latest technology trends to ensure that our
+            clients get the most efficient custom software solutions. Our
+            expertise in a range of cutting-edge technology platforms enables us
+            to offer the best technologies for your unique project needs.
+          </p>
+        </div>
+        <div className="techPlatformContent">
+          {techLogos?.map((elem, i) => {
+            return (
+              <Fragment key={i}>
+                <TechPlatform src={elem} />
+              </Fragment>
+            );
+          })}
+        </div>
+      </div>
+      <div className="clientStoriesWrapper">
+        <div className="clientStoriesTitle">
+          <p>Client stories</p>
+        </div>
+        <div className="storyContent"></div>
       </div>
     </main>
   );
