@@ -401,4 +401,120 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
       padding-top: 60px;
     }
   }
+
+  .industriesWrapper {
+    padding-top: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
+    @media (min-width: 420px) {
+      padding: 150px 35px 0 35px;
+    }
+    @media (min-width: 900px) {
+      padding-inline: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 175px;
+      padding-inline: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-inline: 155px;
+    }
+  }
+  .industriesWrapper .industriesTop {
+    display: flex;
+  }
+  .industriesWrapper .industriesTop .industriesTitle {
+    flex: 1;
+  }
+  .industriesWrapper .industriesTop .arrowBtnsBox {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    @media (min-width: 1100px) {
+      gap: 30px;
+    }
+  }
+  .industriesWrapper .industriesTitle p {
+    font-size: 24px;
+    white-space: nowrap;
+    @media (min-width: 900px) {
+      font-size: 40px;
+    }
+  }
+  .industriesWrapper .industriesContent {
+    padding-top: 30px;
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    @media (min-width: 1100px) {
+      padding-top: 50px;
+    }
+    @media (min-width: 1500px) {
+      padding-top: 60px;
+    }
+  }
+  .techPlatformsWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 25px 0 25px;
+    @media (min-width: 420px) {
+      padding: 150px 35px 0 35px;
+    }
+    @media (min-width: 900px) {
+      padding-inline: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 175px;
+      padding-inline: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-inline: 155px;
+    }
+  }
+
+  .techPlatformsWrapper .techPlaformTitle p {
+    font-size: 24px;
+    @media (min-width: 900px) {
+      font-size: 40px;
+    }
+  }
+  .techPlatformsWrapper .techPlatformsTxt {
+    padding: 30px 0 0 5px;
+    width: 90%;
+    @media (min-width: 1100px) {
+      padding: 60px 0 0 5px;
+      width: 66.6%;
+    }
+  }
+  .techPlatformsWrapper .techPlatformsTxt p {
+    font-size: 16px;
+    line-height: 1.5;
+    @media (min-width: 1100px) {
+      font-size: 20px;
+    }
+  }
+  .techPlatformsWrapper .techPlatformContent {
+    flex: 1;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 30px;
+
+    @media (min-width: 1000px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @media (min-width: 1100px) {
+      padding-top: 50px;
+    }
+    @media (min-width: 1500px) {
+      padding-top: 60px;
+    }
+  }
 `;
