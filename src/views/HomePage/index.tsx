@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import { StyledSliderContainer } from "../../Components/Slider/sliderContainer.styles";
 import { StyledPartners } from "../../Components/Partners/partners.style";
 import { StyledServices } from "../../Components/OurServices/ourServices.styles";
@@ -27,7 +27,7 @@ import { StyledSolution } from "../../Components/Solutions/Solutions.styles";
 type HomeProps = {
   className: string;
 };
-const HomePage = ({ className }: HomeProps): JSX.Element => {
+const HomePage = ({ className }: HomeProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [SliderItems, _] = useState([
     {
@@ -103,6 +103,18 @@ const HomePage = ({ className }: HomeProps): JSX.Element => {
     },
   ]);
 
+  // const itemsRef = useRef<HTMLDivElement | null>(null);
+  // const [isMouseDown, setIsMouseDown] = useState(false);
+  // const [startX, setStartX] = useState(0);
+  // const [scrollLeft, setScrollLeft] = useState(0);
+
+  const itemsRef = useRef<HTMLDivElement | null>(null);
+  const [dragState, setDragState] = useState({
+    isMouseDown: false,
+    startX: 0,
+    scrollLeft: 0,
+  });
+
   const prevImg = () => {
     setSliderIndex(sliderIndex - 1);
     if (sliderIndex === 0) {
@@ -116,6 +128,71 @@ const HomePage = ({ className }: HomeProps): JSX.Element => {
       setSliderIndex(0);
     }
   };
+
+  // const handleMouseDown = (e: React.MouseEvent) => {
+  //   setIsMouseDown(true);
+  //   setStartX(e.pageX - (itemsRef.current?.offsetLeft || 0));
+  //   setScrollLeft(itemsRef.current?.scrollLeft || 0);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsMouseDown(false);
+  // };
+
+  // const handleMouseUp = () => {
+  //   setIsMouseDown(false);
+  // };
+
+  // const handleMouseMove = (e: React.MouseEvent) => {
+  //   if (!isMouseDown) return;
+  //   e.preventDefault();
+  //   const x = e.pageX - (itemsRef.current?.offsetLeft || 0);
+  //   const walk = (x - startX) * 2;
+  //   if (itemsRef.current) {
+  //     itemsRef.current.scrollLeft = scrollLeft - walk;
+  //   }
+  // };
+
+  //mouseDrag
+
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    if (itemsRef.current) {
+      const { offsetLeft, scrollLeft } = itemsRef.current;
+      setDragState({
+        isMouseDown: true,
+        startX: e.pageX - offsetLeft,
+        scrollLeft,
+      });
+    }
+  }, []);
+
+  const handleMouseLeaveOrUp = useCallback(() => {
+    setDragState((prev) => ({ ...prev, isMouseDown: false }));
+  }, []);
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent) => {
+      if (!dragState.isMouseDown || !itemsRef.current) return;
+      e.preventDefault();
+      const { pageX } = e;
+      const { offsetLeft } = itemsRef.current;
+      const { startX, scrollLeft } = dragState;
+      const x = pageX - offsetLeft;
+      const walk = (x - startX) * 2;
+      itemsRef.current.scrollLeft = scrollLeft - walk;
+    },
+    [dragState]
+  );
+
+  useEffect(() => {
+    if (dragState.isMouseDown) {
+      document.addEventListener("mouseup", handleMouseLeaveOrUp);
+      document.addEventListener("mouseleave", handleMouseLeaveOrUp);
+    } else {
+      document.removeEventListener("mouseup", handleMouseLeaveOrUp);
+      document.removeEventListener("mouseleave", handleMouseLeaveOrUp);
+    }
+  });
 
   return (
     <main className={className}>
@@ -206,7 +283,16 @@ const HomePage = ({ className }: HomeProps): JSX.Element => {
             <ArrowBtns direction="right" />
           </div>
         </div>
-        <div className="employeeContent">
+        <div
+          className="employeeContent"
+          ref={itemsRef}
+          // onMouseDown={handleMouseDown}
+          // onMouseLeave={handleMouseLeave}
+          // onMouseUp={handleMouseUp}
+          // onMouseMove={handleMouseMove}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+        >
           <Employees />
           <Employees />
           <Employees />

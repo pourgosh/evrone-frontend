@@ -135,6 +135,7 @@ table {
 html{
     font-size:16px;
     line-height:1.5 ;
+    scroll-behavior:smooth;
     }
 body{
         background-color: #fff;
