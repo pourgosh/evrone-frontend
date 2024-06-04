@@ -517,4 +517,46 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
       padding-top: 60px;
     }
   }
+  .clientStoriesWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 25px 0 25px;
+    @media (min-width: 420px) {
+      padding: 150px 35px 0 35px;
+    }
+    @media (min-width: 900px) {
+      padding-inline: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 175px;
+      padding-inline: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-inline: 155px;
+    }
+  }
+  .clientStoriesWrapper .clientStoriesTitle {
+    display: flex;
+  }
+  .clientStoriesWrapper .clientStoriesTitle p {
+    flex: 1;
+    font-size: 24px;
+    @media (min-width: 900px) {
+      font-size: 40px;
+    }
+  }
+  .clientStoriesWrapper .clientStoriesTitle .arrowBtnBox {
+    display: flex;
+    gap: 10px;
+    @media (min-width: 1100px) {
+      gap: 30px;
+    }
+  }
+  .clientStoriesWrapper .storyContent {
+    display: flex;
+    flex-direction: column;
+  }
+  .clientStoriesWrapper .storyContent {
+    padding: 30px 0 0 5px;
+  }
 `;

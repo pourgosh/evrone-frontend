@@ -47,6 +47,7 @@ import rubyImg from "/bottomlogos/tech-ruby.png";
 import tsImg from "/bottomlogos/tech-typescript.png";
 import vueImg from "/bottomlogos/tech-vue.png";
 import TechPlatform from "../../Components/TechPlatform";
+import ClientStory from "../../Components/ClientStory";
 
 type HomeProps = {
   className: string;
@@ -197,6 +198,124 @@ const HomePage = ({ className }: HomeProps) => {
     flutterImg,
     kubernetisImg,
   ]);
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [clientStory, setClientStory] = useState([
+    {
+      story:
+        "The most impressive thing about Evrone.com team is their ability to find solutions to our issues and willingness to take on any challenge. We’re satisfied with the work that Evrone.com has done for us on both the development and testing sides on our platform. They were easy to work with, responsive enough to feedback, and met all the milestones within the budget and time.",
+      name: "Mark Lavie",
+      job: "Director, Lavtech Computers Inc., Badoo Group",
+      img: null,
+    },
+    {
+      story:
+        "I learned a lot in the past year, working with Evrone.com to explore using new cross-platform frameworks like Flutter (including contributing an audio recording module to the community), design language, and flows. We decided to use a Firebase backend with Google’s speech recognition API. The Evrone team introduced me to a broad swath of design tools and process like Trello, Zeplin, Loom, Marvel, InVision, and more.",
+      name: "David E.Weekly",
+      job: "Founder & CEO, Medcorder.com — App to record & share doctor chats",
+      img: medcor,
+    },
+    {
+      story:
+        "I love seeing new plugins like Flutter Audio by Evrone: tightly focused on doing one thing well. Lots of interesting ways to use this for mobile apps. Thanks Evrone for making Flutter better!",
+      name: "Tim Sneath",
+      job: "Director of Product and UX for Flutter & Dart, Google",
+      img: null,
+    },
+    {
+      story:
+        "Evrone.com developed a web-based platform that allows users to connect, ask and answer questions, and integrate with social media. Users are giving positive feedback and are happy with the process of getting involved.",
+      name: "Erez Naveh",
+      job: "Co-Founder & VP come2play.com, Quiv.com, Yallo",
+      img: quiv,
+    },
+    {
+      story:
+        "The Python developer Evrone allocated to our project did a great job. We’re glad that, thanks to our collaboration, we managed to develop an MVP right on time, and, eventually, successfully pitch the project to investors.",
+      name: "Lavell Juan",
+      job: "CEO at Brag House",
+      img: null,
+    },
+    {
+      story:
+        "I was surprised that we have more than 700 people, almost 800 people here. Which means Ruby Russia is one of the biggest Ruby conferences in the world. That is quite impressive.",
+      name: "Yukihiro Matsumoto",
+      job: "Ruby's creator",
+      img: null,
+    },
+    {
+      story:
+        "Our experience working with Evrone was absolutely wonderful. They were able to deliver everything we needed even ahead of the deadline. The quality of their code and their flexibility were two stand-out qualities of our partnership. We would definitely recommend hiring them if you need to develop a mobile app for your healthcare project.",
+      name: "Khaja Khan",
+      job: "President, Aerovu Technologies, Inc.",
+      img: null,
+    },
+    {
+      story:
+        "Every breaking change induces pain in the developer community. If you don't have many developers, then breaking changes aren't a big problem. And you also have to think about the cost-benefit tradeoff. If you do a breaking change, it adds some pain, but it also brings some benefit.",
+      name: "James Gosling",
+      job: "Creator of the Java Programming Language",
+      img: null,
+    },
+    {
+      story:
+        "The team at Evrone delivered high-quality work. Internal feedback has been extremely positive. Their patience complemented their professional management style. Customers can expect a dynamic and creative team that provides strong value. I think they’re underpriced. The value is spectacular for what we received.",
+      name: "Sean Hoge",
+      job: "Founder & General Partner at Starship.vc, Managing Partner at Genesisblockchain.io",
+      img: null,
+    },
+    {
+      story:
+        "They were effective, communicative, and to the point. The site cultivated an influx of inbound leads. Users spend more time on the site, and the bounce rate is lower. Evrone.com met deadlines and offered a quality deliverable within a small budget and short timeline.",
+      name: "Richard Carreon",
+      job: "VP Marketing at Videon.com",
+      img: null,
+    },
+    {
+      story:
+        "Evrone’s developers were senior and wrote a high-quality code. They were much better than an average developer. They had more experience than I had expected for the price we were paying. At the time, it made financial sense. We were able to get developers that would have cost three times as much in the US.",
+      name: "Dan Pinto",
+      job: "Co-Founder & CEO at Fingerprint.com",
+      img: null,
+    },
+    {
+      story:
+        "Elixir is great for everything that runs on top of a socket, like web servers, IoT devices, distributed systems, audio/video streaming, etc. When you're doing anything that relies on the network, if data is going in and out, Elixir will be excellent. Elixir is `the language for communication`.",
+      name: "José Valim",
+      job: "The creator of the Elixir programming language",
+      img: null,
+    },
+    {
+      story:
+        "Users don’t like things being taken away. The takeaway is you need to understand what your users want — it’s not that easy and sometimes you will get that information the hard way, but you need to be willing to listen regardless.",
+      name: "Evan You",
+      job: "Creator of Vue.js",
+      img: null,
+    },
+    {
+      story:
+        "Software development is, if nothing else, a team sport. You really need to get people working together. And that matters as much as the core technology and just, you know, laying down a lot of great code.",
+      name: "Joe Beda",
+      job: "Principal Engineer at VMware",
+      img: null,
+    },
+    {
+      story:
+        "People give me too much credit for PowerShell. PowerShell is great because we had a series of rockstar engineers add their awesomeness to the project. What I will take credit for is that the Monad Manifesto created a conceptual framework which created clarity. That allowed those rockstars to contribute in a way that their IQs added together to produce a coherent solution. Empirical evidence indicates that that is a rare thing.",
+      name: "Jeffrey Snover",
+      job: "Windows PowerShell Inventor",
+      img: null,
+    },
+    {
+      story:
+        "Math is one of the best ways to train our brains, especially when combined with computing so that our mistakes become obvious pretty soon. Math teaches us to be accurate and not to believe in oversimplified or simply false ideas.",
+      name: "Bjarne Stroustrup",
+      job: "C++ Creator",
+      img: null,
+    },
+  ]);
+
+  const [storyIndex, setStoryIndex] = useState(0);
   // const itemsRef = useRef<HTMLDivElement | null>(null);
   // const [isMouseDown, setIsMouseDown] = useState(false);
   // const [startX, setStartX] = useState(0);
@@ -463,8 +582,35 @@ const HomePage = ({ className }: HomeProps) => {
       <div className="clientStoriesWrapper">
         <div className="clientStoriesTitle">
           <p>Client stories</p>
+          <div className="arrowBtnBox">
+            <ArrowBtns
+              direction="left"
+              onClick={() => {
+                setStoryIndex(storyIndex - 1);
+                if (storyIndex === 0) {
+                  setStoryIndex(0);
+                }
+              }}
+            />
+            <ArrowBtns
+              direction="right"
+              onClick={() => {
+                setStoryIndex(storyIndex + 1);
+                if (storyIndex === clientStory.length - 1) {
+                  setStoryIndex(clientStory.length - 1);
+                }
+              }}
+            />
+          </div>
         </div>
-        <div className="storyContent"></div>
+        <div className="storyContent">
+          <ClientStory
+            story={clientStory[storyIndex].story}
+            name={clientStory[storyIndex].name}
+            job={clientStory[storyIndex].job}
+            img={clientStory[storyIndex].img}
+          />
+        </div>
       </div>
     </main>
   );
