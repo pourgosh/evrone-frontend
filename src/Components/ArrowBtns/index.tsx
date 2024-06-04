@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 type Props = {
   direction: "left" | "right";
+  onClick?: () => void;
 };
 
 const StyledArrowBtn = styled.button`
@@ -17,8 +18,12 @@ const StyledArrowBtn = styled.button`
     font-size: 24px;
   }
 `;
-const ArrowBtns = ({ direction = "left" }: Props) => {
-  return <StyledArrowBtn>{direction === "right" ? ">" : "<"}</StyledArrowBtn>;
+const ArrowBtns = ({ direction = "left", onClick }: Props) => {
+  return (
+    <StyledArrowBtn onClick={onClick}>
+      {direction === "right" ? ">" : "<"}
+    </StyledArrowBtn>
+  );
 };
 
 export default ArrowBtns;
