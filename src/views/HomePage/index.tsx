@@ -48,6 +48,7 @@ import tsImg from "/bottomlogos/tech-typescript.png";
 import vueImg from "/bottomlogos/tech-vue.png";
 import TechPlatform from "../../Components/TechPlatform";
 import ClientStory from "../../Components/ClientStory";
+import DevProcess from "../../Components/DevProcess";
 
 type HomeProps = {
   className: string;
@@ -626,6 +627,14 @@ const HomePage = ({ className }: HomeProps) => {
           <p>
             Here`s a breakdown of our process, which we follow for all projects
           </p>
+        </div>
+        <div className="devProcessContent">
+          <DevProcess num={1} />
+          <DevProcess num={2} />
+          <DevProcess num={3} />
+          <DevProcess num={4} />
+          <DevProcess num={5} />
+          <DevProcess num={6} />
         </div>
       </div>
     </main>

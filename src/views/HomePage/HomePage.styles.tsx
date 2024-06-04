@@ -608,4 +608,9 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
       font-size: 20px;
     }
   }
+  .devProcessWrapper .devProcessContent {
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+  }
 `;
