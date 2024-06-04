@@ -612,6 +612,22 @@ const HomePage = ({ className }: HomeProps) => {
           />
         </div>
       </div>
+      <div className="devProcessWrapper">
+        <div className="devProcessTop">
+          <div className="devProcessTitle">
+            <p>Our software development process</p>
+          </div>
+          <div className="devProcessArrowBtn">
+            <ArrowBtns direction="left" />
+            <ArrowBtns direction="right" />
+          </div>
+        </div>
+        <div className="processBreakDown">
+          <p>
+            Here`s a breakdown of our process, which we follow for all projects
+          </p>
+        </div>
+      </div>
     </main>
   );
 };

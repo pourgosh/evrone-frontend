@@ -559,4 +559,53 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
   .clientStoriesWrapper .storyContent {
     padding: 30px 0 0 5px;
   }
+  .devProcessWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 25px 0 25px;
+    @media (min-width: 420px) {
+      padding: 150px 35px 0 35px;
+    }
+    @media (min-width: 900px) {
+      padding-inline: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 175px;
+      padding-inline: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-inline: 155px;
+    }
+  }
+  .devProcessWrapper .devProcessTop {
+    display: flex;
+  }
+  .devProcessWrapper .devProcessTop .devProcessTitle {
+    flex: 1;
+    font-size: 24px;
+    @media (min-width: 900px) {
+      font-size: 40px;
+    }
+  }
+  .devProcessWrapper .devProcessTop .devProcessArrowBtn {
+    display: flex;
+    gap: 10px;
+    @media (min-width: 1100px) {
+      gap: 30px;
+    }
+  }
+  .devProcessWrapper .processBreakDown {
+    padding-top: 15px;
+
+    @media (min-width: 1000px) {
+      padding-top: 30px;
+    }
+  }
+  .devProcessWrapper .processBreakDown p {
+    font-size: 16px;
+    line-height: 1.5;
+    @media (min-width: 1000px) {
+      font-size: 20px;
+    }
+  }
 `;
