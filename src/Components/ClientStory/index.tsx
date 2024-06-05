@@ -38,6 +38,10 @@ const StyleStory = styled.div`
   .clientInfo {
     display: flex;
     align-items: center;
+    padding-top: 15px;
+    @media (min-width: 1000px) {
+      padding-top: 30px;
+    }
   }
   .clientInfo .clientProfile {
     display: flex;

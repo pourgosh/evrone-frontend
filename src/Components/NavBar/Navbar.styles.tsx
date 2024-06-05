@@ -8,9 +8,13 @@ type NavProps = {
 };
 
 export const StyledNav = styled(NavBar)<NavProps>`
+  position: fixed;
+  width: 92%;
   display: flex;
+  z-index: 10;
   padding: 14px 20px;
   font-family: Suisse Intl Regular;
+  background-color: #fff;
   @media (min-width: 900px) {
     padding: 14px 30px;
   }
