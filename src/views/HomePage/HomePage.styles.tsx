@@ -64,7 +64,7 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
       font-size: 20px;
     }
   }
-  form {
+  .headerForm {
     padding-left: 25px;
     display: flex;
     flex-direction: column;
@@ -85,7 +85,7 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
       padding-left: 135px;
     }
   }
-  form section {
+  .headerForm section {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -111,19 +111,6 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
     }
     @media (min-width: 1260px) {
       padding-right: 120px;
-    }
-  }
-  form input {
-    font-size: 16px;
-    color: #000;
-    border-radius: 6px;
-    color: #000;
-    border: 2px solid #f0f0f0;
-    background-color: #f0f0f0;
-    padding: 6px;
-    @media (min-width: 900px) {
-      font-size: 20px;
-      padding: 10px;
     }
   }
   .offersContainer {
@@ -228,21 +215,6 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
     }
     @media (min-width: 1800px) {
       padding-top: 55px;
-    }
-  }
-  .allStudiesBtn button {
-    color: #000;
-    background-color: #f0f0f0;
-    padding: 8px 16px;
-    white-space: nowrap;
-    font-size: 16px;
-    border-radius: 6px;
-    border: 1px solid #f0f0f0;
-    line-height: 2;
-    @media (min-width: 1100px) {
-      padding: 10px 20px;
-      font-size: 20px;
-      line-height: 1.5;
     }
   }
 
@@ -610,7 +582,100 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
   }
   .devProcessWrapper .devProcessContent {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 20px;
     overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    @media (min-width: 1100px) {
+      padding-top: 50px;
+    }
+  }
+  .faqWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 25px 0 25px;
+    @media (min-width: 420px) {
+      padding: 150px 35px 0 35px;
+    }
+    @media (min-width: 900px) {
+      padding-inline: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 175px;
+      padding-inline: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-inline: 155px;
+    }
+  }
+  .faqWrapper .faqTitle p {
+    flex: 1;
+    font-size: 24px;
+    @media (min-width: 900px) {
+      font-size: 40px;
+    }
+  }
+  .faqWrapper .faqContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  .aboutClientWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 25px 0 25px;
+    @media (min-width: 420px) {
+      padding: 150px 35px 0 35px;
+    }
+    @media (min-width: 900px) {
+      padding-inline: 45px;
+    }
+    @media (min-width: 1100px) {
+      padding-top: 175px;
+      padding-inline: 80px;
+    }
+    @media (min-width: 1260px) {
+      padding-inline: 155px;
+    }
+  }
+  .aboutClientWrapper .aboutClientTitle p {
+    font-size: 40px;
+    line-height: 1.5;
+    @media (min-width: 1000px) {
+      font-size: 60px;
+      line-height: 1.25;
+    }
+  }
+  .aboutClientWrapper .companyInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 30px;
+    @media (min-width: 720px) {
+      align-items: center;
+      flex-direction: row;
+      gap: 15px;
+    }
+    @media (min-width: 1000px) {
+      padding-top: 60px;
+      gap: 30px;
+    }
+  }
+  .aboutClientWrapper .companyInfo p {
+    padding-bottom: 5px;
+    font-size: 16;
+    line-height: 1.5;
+    border-bottom: 1px solid #ccc;
+    @media (min-width: 1000px) {
+      font-size: 20px;
+      line-height: 1.25;
+    }
   }
 `;

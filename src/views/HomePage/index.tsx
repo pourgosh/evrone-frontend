@@ -49,6 +49,9 @@ import vueImg from "/bottomlogos/tech-vue.png";
 import TechPlatform from "../../Components/TechPlatform";
 import ClientStory from "../../Components/ClientStory";
 import DevProcess from "../../Components/DevProcess";
+import Faq from "../../Components/Faq";
+import ClientForm from "../../Components/ClientForm";
+import { StyledButton } from "../../Components/Button/Button.styles";
 
 type HomeProps = {
   className: string;
@@ -418,7 +421,7 @@ const HomePage = ({ className }: HomeProps) => {
       <div className="subHeaderContainer">
         <p>Need a custom software? Tell us about your idea:</p>
       </div>
-      <form>
+      <form className="headerForm">
         <section>
           <Input type={"text"} placeholder={"Full name"} />
           <Input type={"text"} placeholder={"Email"} />
@@ -464,7 +467,11 @@ const HomePage = ({ className }: HomeProps) => {
           );
         })}
         <div className="allStudiesBtn">
-          <button>All Case Studies</button>
+          <StyledButton
+            label={"All Case Studies"}
+            color={"#000"}
+            bgColor={"#f0f0f0"}
+          />
         </div>
       </div>
       <div className="whyUsWrapper">
@@ -636,6 +643,30 @@ const HomePage = ({ className }: HomeProps) => {
           <DevProcess num={5} />
           <DevProcess num={6} />
         </div>
+      </div>
+      <div className="faqWrapper">
+        <div className="faqTitle">
+          <p>FAQ</p>
+        </div>
+        <div className="faqContent">
+          <Faq />
+        </div>
+      </div>
+      <div className="aboutClientWrapper">
+        <div className="aboutClientTitle">
+          <p>Let`s talk about you</p>
+        </div>
+        <div className="companyInfo">
+          <p>+49 176 24514399</p>
+          <p>Kemperplatz 1, 10785 Berlin</p>
+          <p>mail@evrone.com</p>
+        </div>
+        <div className="clientFormContainer">
+          <ClientForm />
+        </div>
+      </div>
+      <div className="footerWrapper">
+        <div className="footerBottomLogos"></div>
       </div>
     </main>
   );
