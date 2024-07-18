@@ -665,9 +665,6 @@ const HomePage = ({ className }: HomeProps) => {
           <ClientForm />
         </div>
       </div>
-      <div className="footerWrapper">
-        <div className="footerBottomLogos"></div>
-      </div>
     </main>
   );
 };
