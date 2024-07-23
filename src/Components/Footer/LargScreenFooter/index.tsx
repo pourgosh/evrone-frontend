@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 type Props = {
-  onClick?: () => void;
-  displayer: boolean;
   label: string;
   valueA?: string;
   valueB?: string;
@@ -11,8 +9,8 @@ type Props = {
   valueE?: string;
   valueF?: string;
 };
-const StyledFooterItems = styled.div`
-  border-bottom: 1px solid #333;
+
+const StyledLsFooterItems = styled.div`
   padding-bottom: 10px;
   .footerlabelText p {
     padding-block: 16px;
@@ -28,9 +26,7 @@ const StyledFooterItems = styled.div`
   }
 `;
 
-const Footer = ({
-  onClick,
-  displayer,
+const LargeScreenFooter = ({
   label,
   valueA,
   valueB,
@@ -40,22 +36,20 @@ const Footer = ({
   valueF,
 }: Props) => {
   return (
-    <StyledFooterItems>
-      <div className="footerlabelText" onClick={onClick}>
+    <StyledLsFooterItems>
+      <div className="footerlabelText">
         <p>{label}</p>
       </div>
-      {displayer && (
-        <div className="footerOptions">
-          <p>{valueA}</p>
-          <p>{valueB}</p>
-          <p>{valueC}</p>
-          <p>{valueD}</p>
-          <p>{valueE}</p>
-          <p>{valueF}</p>
-        </div>
-      )}
-    </StyledFooterItems>
+      <div className="footerOptions">
+        <p>{valueA}</p>
+        <p>{valueB}</p>
+        <p>{valueC}</p>
+        <p>{valueD}</p>
+        <p>{valueE}</p>
+        <p>{valueF}</p>
+      </div>
+    </StyledLsFooterItems>
   );
 };
 
-export default Footer;
+export default LargeScreenFooter;
