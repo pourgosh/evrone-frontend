@@ -75,10 +75,27 @@ export const StyledServices = styled(OurServices)<OurServicesType>`
     margin-block: 20px;
     font-size: 20px;
     border-bottom: 1px solid #999;
+    &:hover {
+      cursor: pointer;
+    }
     padding-bottom: 3px;
     @media (min-width: 1100px) {
       font-size: 30px;
       margin-bottom: 40px;
+    }
+  }
+  .serviceOptions .serviceText {
+    padding-right: 10px;
+    @media (min-width: 990px) {
+      padding-right: 60px;
+    }
+  }
+  .serviceOptions .serviceText p {
+    font-size: 16px;
+    line-height: 1.3;
+    @media (min-width: 990px) {
+      font-size: 20px;
+      line-height: 1.5;
     }
   }
 `;
