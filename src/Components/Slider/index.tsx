@@ -1,3 +1,5 @@
+import { GoTriangleLeft, GoTriangleRight } from "react-icons/go";
+
 type Props = {
   className?: string;
   bgImage?: string;
@@ -22,10 +24,14 @@ const SliderContainer = ({
       <section className="imgContainer">
         <div className="btnContainer">
           <span>
-            <button onClick={prevFunc}>Prev</button>
+            <button onClick={prevFunc}>
+              <GoTriangleLeft />
+            </button>
           </span>
           <span>
-            <button onClick={nextFunc}>next</button>
+            <button onClick={nextFunc}>
+              <GoTriangleRight />
+            </button>
           </span>
         </div>
       </section>

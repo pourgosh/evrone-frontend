@@ -27,7 +27,7 @@ export const StyledNav = styled(NavBar)<NavProps>`
   .menu p,
   .letsTalk p,
   .listContainer p {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 300;
     white-space: nowrap;
   }
@@ -35,6 +35,9 @@ export const StyledNav = styled(NavBar)<NavProps>`
     flex: 1;
     @media (min-width: 900px) {
       padding: 10px;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
   .logoContainer p {
@@ -58,8 +61,10 @@ export const StyledNav = styled(NavBar)<NavProps>`
     display: none;
     gap: 20px;
     padding-right: 15px;
+    height: 100%;
     @media (min-width: 1260px) {
       display: flex;
+      align-items: center;
     }
   }
   .listContainer div svg {
@@ -67,8 +72,14 @@ export const StyledNav = styled(NavBar)<NavProps>`
     font-weight: 300;
     white-space: nowrap;
   }
+
   .navItem {
     padding-top: 4px;
+    &:hover {
+      cursor: pointer;
+      border-bottom: 1px solid #999;
+      color: #999;
+    }
   }
   .menu {
     @media (min-width: 900px) {
@@ -85,6 +96,15 @@ export const StyledNav = styled(NavBar)<NavProps>`
     border-radius: 6px;
     @media (max-width: 985px) {
       display: none;
+    }
+    @media (min-width: 1260px) {
+      margin-right: 100px;
+    }
+    @media (min-width: 2000px) {
+      margin-right: 50px;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
   .letsTalk p {

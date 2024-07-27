@@ -17,6 +17,7 @@ const NavBar = ({ className }: NavBarProps): JSX.Element => {
           <div className="navItem">
             <p>Services</p>
           </div>
+
           <div className="navItem">
             <p>Technologies</p>
           </div>

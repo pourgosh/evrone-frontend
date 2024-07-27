@@ -74,13 +74,16 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
   }
   .imgContainer .btnContainer {
     flex: 1;
-    height: fit-content;
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
     @media (min-width: 900px) {
       padding: 0 25px;
     }
+  }
+  .imgContainer .btnContainer span button svg {
+    width: 20px;
+    height: 20px;
   }
   .itemInfoContainer {
     width: 100%;
