@@ -83,7 +83,7 @@ const StyledClientForm = styled.form`
     align-items: center;
     padding: 10px 10px 0 2px;
     @media (min-width: 480px) {
-      padding: 10px 10px 0 25px;
+      padding: 10px 10px 10px 25px;
     }
   }
   .bottomContent .clientFormBottomInfo p {
@@ -93,6 +93,21 @@ const StyledClientForm = styled.form`
     @media (min-width: 720px) {
       font-size: 12px;
       line-height: 1.5;
+    }
+    @media (min-width: 990px) {
+      width: 80%;
+    }
+    @media (min-width: 1300px) {
+      width: 70%;
+    }
+    @media (min-width: 1650px) {
+      width: 60%;
+    }
+    @media (min-width: 2000px) {
+      width: 50%;
+    }
+    @media (min-width: 2300px) {
+      width: 40%;
     }
   }
   .bottomContent .clientFormBottomInfo span {
@@ -135,7 +150,8 @@ const ClientForm = () => {
         <div className="clientFormBottomInfo">
           <p>
             This site is protecte by reCAPTCHA and the Google
-            <span>Privacy Policy</span> and <span>Terms of Service</span> apply.
+            <span> Privacy Policy</span> and <span>Terms of Service</span>{" "}
+            apply.
           </p>
         </div>
       </div>
