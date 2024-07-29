@@ -70,6 +70,10 @@ export const StyledServices = styled(OurServices)<OurServicesType>`
       padding-left: 160px;
     }
   }
+  .serviceOptions section {
+    display: flex;
+    align-items: baseline;
+  }
   .serviceOptions section p {
     width: fit-content;
     margin-block: 20px;
@@ -83,6 +87,10 @@ export const StyledServices = styled(OurServices)<OurServicesType>`
       font-size: 30px;
       margin-bottom: 40px;
     }
+  }
+  .serviceOptions section svg {
+    width: 20px;
+    height: 20px;
   }
   .serviceOptions .serviceText {
     padding-right: 10px;

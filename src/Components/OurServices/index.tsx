@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { GoTriangleDown } from "react-icons/go";
 
 type Props = {
   className?: string;
@@ -37,6 +38,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>UI/UX Design Services</p>
+          <GoTriangleDown />
         </section>
         {service.uXuI && (
           <div className="serviceText">
@@ -67,6 +69,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>Software Development Consulting Services</p>
+          <GoTriangleDown />
         </section>
         {service.softDev && (
           <div className="serviceText">
@@ -93,6 +96,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>Discovery Phase Services</p>
+          <GoTriangleDown />
         </section>
         {service.discPhase && (
           <div className="serviceText">
@@ -119,6 +123,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>Web Development Services</p>
+          <GoTriangleDown />
         </section>
         {service.webDev && (
           <div className="serviceText">
@@ -149,6 +154,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>Front-End Development Services</p>
+          <GoTriangleDown />
         </section>
         {service.frontEndDev && (
           <div className="serviceText">
@@ -176,6 +182,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>Custom Application Development</p>
+          <GoTriangleDown />
         </section>
         {service.customApp && (
           <div className="serviceText">
@@ -206,6 +213,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>DevOps Services</p>
+          <GoTriangleDown />
         </section>
         {service.devOps && (
           <div className="serviceText">
@@ -234,6 +242,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>QA Consulting & tesing Services</p>
+          <GoTriangleDown />
         </section>
         {service.qA && (
           <div className="serviceText">
