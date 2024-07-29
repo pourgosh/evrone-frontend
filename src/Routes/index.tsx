@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { StyledHomePage } from "../Views/HomePage/HomePage.styles";
+import { StyledHomePage } from "../views/HomePage/HomePage.styles";
 
 const Router = () => {
   return (
