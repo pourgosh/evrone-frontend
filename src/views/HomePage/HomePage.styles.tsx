@@ -147,9 +147,6 @@ export const StyledHomePage = styled(HomePage)<HomeProps>`
   }
   .scrollerWrapper {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
     padding-top: 30px;
     @media (min-width: 420px) {
       padding-top: 35px;
