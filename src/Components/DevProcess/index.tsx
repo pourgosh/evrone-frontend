@@ -19,6 +19,7 @@ const StyledContent = styled.div`
     }
   }
 `;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const DevProcess = ({ num, text, label }: Props) => {
   return (
     <StyledContent>
