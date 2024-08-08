@@ -154,10 +154,17 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
     white-space: nowrap;
     width: max-content;
     padding-bottom: 2px;
-    border-bottom: 1px solid #999;
-    transition: border-bottom-color 0.3s ease;
-    &:hover {
-      border-bottom-color: #000;
+    /* border-bottom: 1px solid #999; */
+    &:after {
+      display: block;
+      content: "";
+      border-bottom: solid 1px #000;
+      transform: scaleX(0);
+      transition: transform 300ms ease-in-out;
+      transform-origin: 0 50%;
+    }
+    &:hover:after {
+      transform: scaleX(1);
     }
     @media (min-width: 900px) {
       font-size: 24px;

@@ -16,6 +16,11 @@ export const StyledButton = styled(Button)<buttonProps>`
   border-radius: 6px;
   border: 1px solid ${({ bgColor }) => bgColor};
   line-height: 2;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
   @media (min-width: 1100px) {
     padding: 10px 20px;
     font-size: 20px;

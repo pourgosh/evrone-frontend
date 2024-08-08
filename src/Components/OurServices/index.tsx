@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GoTriangleDown } from "react-icons/go";
+import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 
 type Props = {
   className?: string;
@@ -38,7 +38,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>UI/UX Design Services</p>
-          <GoTriangleDown />
+          {!service.uXuI ? <GoTriangleDown /> : <GoTriangleUp />}
         </section>
         {service.uXuI && (
           <div className="serviceText">
@@ -69,7 +69,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>Software Development Consulting Services</p>
-          <GoTriangleDown />
+          {!service.softDev ? <GoTriangleDown /> : <GoTriangleUp />}
         </section>
         {service.softDev && (
           <div className="serviceText">
@@ -96,7 +96,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>Discovery Phase Services</p>
-          <GoTriangleDown />
+          {!service.discPhase ? <GoTriangleDown /> : <GoTriangleUp />}
         </section>
         {service.discPhase && (
           <div className="serviceText">
@@ -123,7 +123,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>Web Development Services</p>
-          <GoTriangleDown />
+          {!service.webDev ? <GoTriangleDown /> : <GoTriangleUp />}
         </section>
         {service.webDev && (
           <div className="serviceText">
@@ -154,7 +154,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>Front-End Development Services</p>
-          <GoTriangleDown />
+          {!service.frontEndDev ? <GoTriangleDown /> : <GoTriangleUp />}
         </section>
         {service.frontEndDev && (
           <div className="serviceText">
@@ -182,7 +182,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>Custom Application Development</p>
-          <GoTriangleDown />
+          {!service.customApp ? <GoTriangleDown /> : <GoTriangleUp />}
         </section>
         {service.customApp && (
           <div className="serviceText">
@@ -213,7 +213,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>DevOps Services</p>
-          <GoTriangleDown />
+          {!service.devOps ? <GoTriangleDown /> : <GoTriangleUp />}
         </section>
         {service.devOps && (
           <div className="serviceText">
@@ -242,7 +242,7 @@ const OurServices = ({ className }: Props) => {
           }}
         >
           <p>QA Consulting & tesing Services</p>
-          <GoTriangleDown />
+          {!service.qA ? <GoTriangleDown /> : <GoTriangleUp />}
         </section>
         {service.qA && (
           <div className="serviceText">
