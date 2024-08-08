@@ -24,14 +24,14 @@ const SliderContainer = ({
       <section className="imgContainer">
         <div className="btnContainer">
           <span>
-            <button onClick={prevFunc}>
+            <div onClick={prevFunc}>
               <GoTriangleLeft />
-            </button>
+            </div>
           </span>
           <span>
-            <button onClick={nextFunc}>
+            <div onClick={nextFunc}>
               <GoTriangleRight />
-            </button>
+            </div>
           </span>
         </div>
       </section>
