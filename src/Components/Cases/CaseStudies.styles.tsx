@@ -7,6 +7,9 @@ type CaseProps = {
 export const StyledCaseStudies = styled(CaseStudies)<CaseProps>`
   padding-inline: 30px;
   padding-top: 30px;
+  &:hover {
+    cursor: pointer;
+  }
   @media (min-width: 1100px) {
     padding-top: 60px;
   }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 
 const StyledFaqContent = styled.div`
   display: flex;
@@ -9,7 +10,12 @@ const StyledFaqContent = styled.div`
     gap: 30px;
   }
   .labelContainer {
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .labelContainer p {
     font-size: 20px;
@@ -53,7 +59,8 @@ const Faq = () => {
           setSixthQ(false);
         }}
       >
-        <p>What is software development</p>
+        <p>What is software development?</p>
+        {!firstQ ? <GoTriangleDown /> : <GoTriangleUp />}
       </div>
       {firstQ && (
         <div className="textContainer">
@@ -77,7 +84,8 @@ const Faq = () => {
           setSixthQ(false);
         }}
       >
-        <p>What are the advantages of custom software development</p>
+        <p>What are the advantages of custom software development?</p>
+        {!scndQ ? <GoTriangleDown /> : <GoTriangleUp />}
       </div>
       {scndQ && (
         <div className="textContainer">
@@ -100,7 +108,8 @@ const Faq = () => {
           setSixthQ(false);
         }}
       >
-        <p>How to choose a custom software development company</p>
+        <p>How to choose a custom software development company?</p>
+        {!thirdQ ? <GoTriangleDown /> : <GoTriangleUp />}
       </div>
       {thirdQ && (
         <div className="textContainer">
@@ -124,7 +133,8 @@ const Faq = () => {
           setSixthQ(false);
         }}
       >
-        <p>How much does custom software development cost</p>
+        <p>How much does custom software development cost?</p>
+        {!fourthQ ? <GoTriangleDown /> : <GoTriangleUp />}
       </div>
       {fourthQ && (
         <div className="textContainer">
@@ -148,7 +158,8 @@ const Faq = () => {
           setSixthQ(false);
         }}
       >
-        <p>How long does it take to build a custom software</p>
+        <p>How long does it take to build a custom software?</p>
+        {!fifthQ ? <GoTriangleDown /> : <GoTriangleUp />}
       </div>
       {fifthQ && (
         <div className="textContainer">
@@ -171,7 +182,8 @@ const Faq = () => {
           setSixthQ(!sixthQ);
         }}
       >
-        <p>What is Agile development</p>
+        <p>What is Agile development?</p>
+        {!sixthQ ? <GoTriangleDown /> : <GoTriangleUp />}
       </div>
       {sixthQ && (
         <div className="textContainer">
