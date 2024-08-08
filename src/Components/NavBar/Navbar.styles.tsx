@@ -62,24 +62,28 @@ export const StyledNav = styled(NavBar)<NavProps>`
     gap: 20px;
     padding-right: 15px;
     height: 100%;
+    &:hover > :not(:hover) {
+      opacity: 0.5;
+    }
     @media (min-width: 1260px) {
       display: flex;
       align-items: center;
     }
   }
-  .listContainer div svg {
+  .listContainer .navItem {
+    height: 100%;
+    padding-top: 4px;
+    display: flex;
+    align-items: center;
+    &:hover {
+      border-bottom: 1px solid #999;
+      cursor: pointer;
+    }
+  }
+  .listContainer .navItem svg {
     font-size: 25px;
     font-weight: 300;
     white-space: nowrap;
-  }
-
-  .navItem {
-    padding-top: 4px;
-    &:hover {
-      cursor: pointer;
-      border-bottom: 1px solid #999;
-      color: #999;
-    }
   }
   .menu {
     @media (min-width: 900px) {
@@ -104,6 +108,7 @@ export const StyledNav = styled(NavBar)<NavProps>`
       margin-right: 50px;
     }
     &:hover {
+      background-color: #090909;
       cursor: pointer;
     }
   }

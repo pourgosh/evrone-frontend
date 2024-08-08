@@ -33,7 +33,7 @@ const NavBar = ({ className }: NavBarProps): JSX.Element => {
           <div className="navItem">
             <p>About</p>
           </div>
-          <div>
+          <div className="navItem">
             <PiGlobe />
           </div>
         </div>
