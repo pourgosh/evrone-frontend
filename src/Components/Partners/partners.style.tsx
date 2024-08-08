@@ -25,28 +25,28 @@ export const StyledPartners = styled(Partners)<partnersType>`
     width: 500px;
     height: 150px;
     margin: 0 120px;
-    animation: ${scroller} 20s linear infinite;
+    animation: ${scroller} 35s linear infinite;
   }
   /* animation dealay calc function formula
   duration * delay * -1 
   (duration of animation relative to total number of items * unique delay for each item * -1 which transforms result to a negetive number)
   */
   .item0 {
-    animation-delay: calc(20s / 6 * (6 - 1) * -1);
+    animation-delay: calc(35s / 6 * (6 - 1) * -1);
   }
   .item1 {
-    animation-delay: calc(20s / 6 * (6 - 2) * -1);
+    animation-delay: calc(35s / 6 * (6 - 2) * -1);
   }
   .item2 {
-    animation-delay: calc(20s / 6 * (6 - 3) * -1);
+    animation-delay: calc(35s / 6 * (6 - 3) * -1);
   }
   .item3 {
-    animation-delay: calc(20s / 6 * (6 - 4) * -1);
+    animation-delay: calc(35s / 6 * (6 - 4) * -1);
   }
   .item4 {
-    animation-delay: calc(20s / 6 * (6 - 5) * -1);
+    animation-delay: calc(35s / 6 * (6 - 5) * -1);
   }
   .item5 {
-    animation-delay: calc(20s / 6 * (6 - 6) * -1);
+    animation-delay: calc(35s / 6 * (6 - 6) * -1);
   }
 `;
