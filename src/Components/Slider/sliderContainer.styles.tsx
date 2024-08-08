@@ -81,7 +81,30 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
       padding: 0 25px;
     }
   }
-  .imgContainer .btnContainer span button svg {
+  .imgContainer .btnContainer span {
+    height: 30px;
+    width: 30px;
+
+    @media (min-width: 980px) {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  .imgContainer .btnContainer span div {
+    width: calc(100%);
+    height: calc(100%);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  .imgContainer .btnContainer span div svg {
     width: 20px;
     height: 20px;
   }
@@ -92,6 +115,11 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
     flex-direction: column;
     @media (min-width: 720px) {
       flex-direction: row;
+    }
+  }
+  .itemInfoContainer {
+    &:hover {
+      cursor: pointer;
     }
   }
   .itemInfoContainer .sliderTitleContainer {
@@ -127,8 +155,9 @@ export const StyledSliderContainer = styled(SliderContainer)<SliderImageProps>`
     width: max-content;
     padding-bottom: 2px;
     border-bottom: 1px solid #999;
+    transition: border-bottom-color 0.3s ease;
     &:hover {
-      border-bottom: 1px solid #000;
+      border-bottom-color: #000;
     }
     @media (min-width: 900px) {
       font-size: 24px;
