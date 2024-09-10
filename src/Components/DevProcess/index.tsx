@@ -7,10 +7,20 @@ type Props = {
 };
 
 const StyledContent = styled.div`
-  display: flex;
+  flex: 1;
+  border-radius: 6px;
+  transition: 0.3s linear;
+  &:hover {
+    flex: 3;
+    background-color: #000;
+  }
   p {
     color: #e6e6e6;
     font-size: 90px;
+    &:hover {
+      color: #f53;
+      cursor: pointer;
+    }
     @media (min-width: 720px) {
       font-size: 120px;
     }

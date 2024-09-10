@@ -9,6 +9,10 @@ const StyledImg = styled.div`
   justify-content: center;
   align-items: center;
   margin: 15px;
+  &:hover {
+    cursor: pointer;
+    scale: 1.2;
+  }
   img {
     width: 100%;
     max-width: 300px;
