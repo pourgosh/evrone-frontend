@@ -10,6 +10,9 @@ export const StyledIndustries = styled(Industries)<industriesType>`
   flex-direction: column;
   gap: 15px;
   margin-right: 40px;
+  &:hover {
+    cursor: pointer;
+  }
   @media (min-width: 1100px) {
     margin-right: 60px;
   }
